@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:linear-gradient(180deg,#160b20,#3a163f,#160b20);
+  color:#fff;overflow-x:hidden;text-align:center;
+}
+section{min-height:100vh;padding:55px 20px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero{position:relative}
+.glow{position:absolute;width:260px;height:260px;border-radius:50%;background:#ff5fa2;filter:blur(90px);opacity:.28}
+h1{font-size:clamp(42px,13vw,76px);line-height:1.05;color:#ffd7e8;text-shadow:0 0 25px #ff5fa2;margin:18px 0}
+h2{font-size:clamp(30px,8vw,48px);color:#ffd7e8;margin-bottom:22px}
+p{font-family:Arial,sans-serif;font-size:17px;line-height:1.75;max-width:650px;color:#f8eaf1}
+.name{color:#ff9fc7}
+.btn{
+  margin-top:28px;padding:15px 26px;border:0;border-radius:999px;
+  background:#ff5f9e;color:white;font-weight:bold;font-size:16px;
+  box-shadow:0 8px 25px #ff5f9e55;cursor:pointer
+}
+.btn:active{transform:scale(.96)}
+.card{
+  width:min(92vw,650px);padding:28px;border-radius:24px;
+  background:#ffffff10;border:1px solid #ffffff20;backdrop-filter:blur(10px);
+  box-shadow:0 15px 45px #0005;margin:15px 0
+}
+.photos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:min(92vw,650px)}
+.photos img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;border:2px solid #ffffff25}
+.reasons{display:grid;gap:12px;width:min(92vw,650px)}
+.reason{padding:18px;border-radius:18px;background:#ffffff0d;border:1px solid #ffffff15;font-family:Arial,sans-serif}
+.heart{position:fixed;bottom:-30px;animation:float 6s linear infinite;opacity:.7;pointer-events:none}
+@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+.fade{animation:fade 1.5s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.small{font-family:Arial,sans-serif;font-size:13px;opacity:.65;margin-top:25px}
+footer{padding:25px;font-family:Arial,sans-serif;font-size:12px;opacity:.6}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="glow"></div>
+  <div class="fade">
+    <div style="font-size:22px">✨ A little surprise for you ✨</div>
+    <h1>Happy Birthday<br><span class="name">NANDHINI❤️</span></h1>
+    <p>I made this little corner of the internet just for you.</p>
+    <button class="btn" onclick="document.getElementById('letter').scrollIntoView()">Tap to Open 💌</button>
+    <div class="small">Use the button above and let the surprise begin...</div>
+  </div>
+</section>
+
+<section id="letter">
+  <h2>For You, <span class="name">NANDHINI</span> ❤️</h2>
+  <div class="card">
+    <p>
+      Happy Birthday to the most special person in my life. ❤️<br><br>
+      Every moment with you has become a beautiful memory that I want to keep forever.
+      Thank you for being you, for the smiles, the little moments, and everything that makes
+      our story ours.<br><br>
+      Today is your day, but honestly, I feel lucky every day because I have you.
+      I hope this new year of your life brings you happiness, peace, dreams come true,
+      and countless reasons to smile.
+    </p>
+  </div>
+  <button class="btn" onclick="document.getElementById('memories').scrollIntoView()">Our Memories 📸</button>
+</section>
+
+<section id="memories">
+  <h2>Our Little Memories 📸</h2>
+  <div class="photos">
+    <img src="assets/photo1.jpg" alt="Memory 1">
+    <img src="assets/photo2.jpg" alt="Memory 2">
+    <img src="assets/photo3.jpg" alt="Memory 3">
+    <img src="assets/photo4.jpg" alt="Memory 4">
+  </div>
+  <p style="margin-top:20px">Every picture has a story. Every story has you. ❤️</p>
+  <button class="btn" onclick="document.getElementById('reasons').scrollIntoView()">One More Thing 💗</button>
+</section>
+
+<section id="reasons">
+  <h2>Things I Love About You 💕</h2>
+  <div class="reasons">
+    <div class="reason">🌸 Your beautiful smile</div>
+    <div class="reason">✨ The way you make ordinary moments special</div>
+    <div class="reason">💗 Your kindness and the little things you do</div>
+    <div class="reason">🌙 The comfort I feel when I'm with you</div>
+    <div class="reason">❤️ Simply... the person you are</div>
+  </div>
+  <button class="btn" onclick="document.getElementById('final').scrollIntoView()">Final Surprise 🎁</button>
+</section>
+
+<section id="final">
+  <div style="font-size:55px">🎂</div>
+  <h2>One Last Thing...</h2>
+  <div class="card">
+    <p>
+      If I could give you one thing today, it would be the ability to see yourself
+      through my eyes — then you'd know just how incredibly special you are to me. ❤️<br><br>
+      No matter how many birthdays come and go, I hope I get to be there for many of them,
+      making memories, laughing together, and choosing you again and again.<br><br>
+      <strong>Happy Birthday, my love. ❤️</strong><br><br>
+      Forever yours,<br>
+      <span class="name"><strong>MANO</strong></span>
+    </p>
+  </div>
+  <button class="btn" onclick="celebrate()">🎉 Tap for a Birthday Surprise</button>
+  <p id="surprise" style="margin-top:20px"></p>
+</section>
+
+<footer>Made with ❤️ especially for you.</footer>
+
+<script>
+function celebrate(){
+  document.getElementById("surprise").innerHTML =
+    "🎈🎈🎈 HAPPY BIRTHDAY!!! 🎈🎈🎈<br><br>May your smile stay forever.";
+  for(let i=0;i<35;i++){
+    const h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML=["❤️","💖","💕","✨","🎈"][Math.floor(Math.random()*5)];
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDelay=Math.random()*2+"s";
+    h.style.fontSize=(18+Math.random()*25)+"px";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),7000);
+  }
+}
+</script>
+</body>
+</html>
